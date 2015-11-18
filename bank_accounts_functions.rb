@@ -63,15 +63,22 @@ end
 
 ###total cash in bank
 
-def total_cash_in_bank()
-    for monies in  ACCOUNTS
-      return monies[:amount][]
-    end
+# def total_cash_in_bank()
+#   def amounts
+#     for monies in  ACCOUNTS
+#       return monies[:amount]
+#     end
+#   end
+#   for coin in amounts
+#     coin += coin
+#   end
+# end
+
+###last account owner
+
+def last_bank_account_holder()
+  ACCOUNTS[7][:holder_name]
 end
-
-
-
-
 
 
 
