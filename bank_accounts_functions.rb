@@ -63,22 +63,31 @@ end
 
 ###total cash in bank
 
-# def total_cash_in_bank()
-#   def amounts
-#     for monies in  ACCOUNTS
-#       return monies[:amount]
-#     end
-#   end
-#   for coin in amounts
-#     coin += coin
-#   end
-# end
+def total_cash_in_bank()
+  money = 0
+  for i in ACCOUNTS
+      money += i[:amount]
+  end
+    return money
+end
 
 ###last account owner
 
 def last_bank_account_holder()
   ACCOUNTS[7][:holder_name]
 end
+
+###average bank account value
+
+def average_account_value()
+  money = 0
+  for i in ACCOUNTS
+      money += i[:amount]
+  end
+    return (money / 8)
+end
+
+###total cash in business accounts
 
 
 

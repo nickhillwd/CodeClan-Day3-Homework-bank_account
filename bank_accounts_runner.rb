@@ -15,10 +15,10 @@ puts "name of bank acccount owners"
 print_owner_names()
 puts "\n"
 
-###total cash in bank
-# total_cash = total_cash_in_bank()
-# puts "total in bank #{total_cash}"
-# puts "\n"
+##total cash in bank
+total_cash = total_cash_in_bank()
+puts "total in bank #{total_cash}"
+puts "\n"
 
 ###last account owner
 
@@ -28,7 +28,15 @@ puts "\n"
 
 ###average bank account value
 
+average_balance = average_account_value()
+puts "average ballance of acoounts is #{average_balance}"
+puts "\n"
+
 ###total cash in business accounts
+
+business_account_average = average_business_account_amount()
+puts "average ballence of business accounts is #{business_account_average}"
+puts "\n"
 
 ###holder of largest bank account
 
