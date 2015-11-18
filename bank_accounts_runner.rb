@@ -11,9 +11,9 @@ puts "first bank account owner is #{first_bank_owner}"
 puts "\n"
 
 ###print to screen name of all bank account owners
-# puts "name of bank acccount owners"
-# print_owner_names()
-# puts "\n"
+puts "name of bank acccount owners"
+print_owner_names()
+puts "\n"
 
 ###total cash in bank
 # total_cash = total_cash_in_bank()
