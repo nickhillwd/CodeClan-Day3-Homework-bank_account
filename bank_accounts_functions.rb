@@ -89,6 +89,13 @@ end
 
 ###total cash in business accounts
 
+def total_business_account_amount()
+  money = 0
+  for i in ACCOUNTS
+    money += i[:amount] if i[:type] == "business"
+  end
+    return money
+end
 
 
 

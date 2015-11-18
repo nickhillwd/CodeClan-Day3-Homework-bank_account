@@ -34,8 +34,8 @@ puts "\n"
 
 ###total cash in business accounts
 
-business_account_average = average_business_account_amount()
-puts "average ballence of business accounts is #{business_account_average}"
+business_account_total = total_business_account_amount()
+puts "total ballence of business accounts is #{business_account_total}"
 puts "\n"
 
 ###holder of largest bank account
