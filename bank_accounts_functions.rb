@@ -97,8 +97,14 @@ def total_business_account_amount()
     return money
 end
 
+###holder of largest bank account
 
+def account_balance_largest(accounts, holder_name)
+  ACCOUNTS.select{|x| x[:holder_name] == holder_name}
+  .max_by{|x| x[:amount]}
+end
 
+# balance_largest = account_balance_largest(ACCOUNTS, 0)
 
 
 
