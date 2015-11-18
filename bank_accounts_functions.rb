@@ -61,4 +61,38 @@ def print_owner_names
   end
 end
 
+###total cash in bank
+
+def total_cash_in_bank()
+    for monies in  ACCOUNTS
+      return monies[:amount][]
+    end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

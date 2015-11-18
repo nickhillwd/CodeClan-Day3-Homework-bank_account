@@ -16,9 +16,9 @@ print_owner_names()
 puts "\n"
 
 ###total cash in bank
-# total_cash = total_cash_in_bank()
-# puts "total in bank #{total_cash}"
-# puts "\n"
+total_cash = total_cash_in_bank()
+puts "total in bank #{total_cash}"
+puts "\n"
 
 ###last account owner
 
