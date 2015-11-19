@@ -34,13 +34,13 @@ puts "\n"
 
 ###total cash in business accounts
 
-business_account_total = total_business_account_amount()
+business_account_total = total_cash_in_bank("business")
 puts "total ballence of business accounts is #{business_account_total}"
 puts "\n"
 
 ###holder of largest bank account
 
-largest_account = account_balance_largest()
+largest_account = holder_of_largest_account
 puts "the holder of the largest account ballance is #{largest_account}"
 puts "\n"
 

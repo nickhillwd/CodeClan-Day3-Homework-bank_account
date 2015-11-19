@@ -61,20 +61,22 @@ def print_owner_names
   end
 end
 
+# suggested to call the itterator variable as account, not name. as we are itterating through the accounts as a whole thing and not just the account names. This could cause confusion for someone else looking at the code.
+
 ###total cash in bank
 
-def total_cash_in_bank()
-  money = 0
-  for i in ACCOUNTS
-      money += i[:amount]
+def total_cash_in_bank(type = nil)
+  total = 0
+  for acc in ACCOUNTS
+      total += acc[:amount] if !type || [:type] == type
   end
-    return money
+    return total
 end
 
 ###last account owner
 
 def last_bank_account_holder()
-  ACCOUNTS[7][:holder_name]
+  ACCOUNTS.last[:holder_name]
 end
 
 ###average bank account value
@@ -84,8 +86,12 @@ def average_account_value()
   for i in ACCOUNTS
       money += i[:amount]
   end
-    return (money / 8)
+    return (money / ACCOUNTS.length)
 end
+
+# def average_account_value
+# total_cash_in_bank / number_of_bank_accounts
+# end
 
 ###total cash in business accounts
 
@@ -99,9 +105,22 @@ end
 
 ###holder of largest bank account
 
-def account_balance_largest(accounts, holder_name)
-  ACCOUNTS.select{|x| x[:holder_name] == holder_name}
-  .max_by{|x| x[:amount]}
+# def account_balance_largest()
+#   holder_name = ""
+#   ACCOUNTS.select{|x| x[:holder_name] == holder_name }
+#   .max_by{|x| x[:amount]}
+#   return holder_name
+# end
+
+def holder_of_largest_account
+  biggest = 0
+  for i in ACCOUNTS
+    if i[:amount] > biggest
+      biggest = i[:amount]
+      richest = i[:holder_name]
+    end
+  end
+  return richest
 end
 
 # balance_largest = account_balance_largest(ACCOUNTS, 0)
