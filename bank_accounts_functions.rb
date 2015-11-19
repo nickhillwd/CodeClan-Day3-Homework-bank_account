@@ -125,6 +125,17 @@ end
 
 # balance_largest = account_balance_largest(ACCOUNTS, 0)
 
+def largest_personal
+  max = 0
+  account_holder = ""
+  for account in ACCOUNTS
+    if account[:type] == "personal" && account[:amount] > max
+      max = account[:amount]
+      account_holder = account[:holder_name]
+    end
+  end
+  return account_holder
+end
 
 
 
