@@ -52,3 +52,6 @@ largest_personal_account = largest_personal()
 
 ###any other functionality you want to add.
 
+new_account = create_new_account
+puts "new account added #{new_account}"
+puts "\n"

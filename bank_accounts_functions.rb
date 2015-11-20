@@ -137,6 +137,27 @@ def largest_personal
   return account_holder
 end
 
+#etra code
+#add a new account
+
+def create_new_account()
+  new_account = {}
+  #get account holder
+  puts "Who would you like to create an account for?"
+  new_account[:holder_name] = gets.chomp
+  #get account type
+  puts "What type of account is it? (business/personal)"
+  new_account[:type] = gets.chomp.downcase
+  until new_account[:type] == "business" || new_account[:type] == "personal"
+    puts "Invalid account type. Please enter business or personal:"
+    new_account[:type] = gets.chomp.downcase
+  end
+  #get account amount
+  puts "What is the initial amount?"
+  new_account[:amount] = gets.chomp.to_i
+  return new_account
+end
+
 
 
 
